@@ -1,0 +1,41 @@
+<main class="card" role="main">
+  
+  <!-- New todo input section -->
+  <div class="new-todo">
+    <input id="newTodo" 
+           type="text" 
+           placeholder="Kirjoita uusi tehtävä ja paina Enter..." 
+           aria-label="Lisää uusi tehtävä" />
+    <button id="addBtn" class="btn" aria-label="Lisää tehtävä">Lisää</button>
+   <link rel="stylesheet" href="todo.css">
+  </div>
+
+  <!-- Toolbar section -->
+  <div class="toolbar">
+    <div class="filters" role="tablist" aria-label="Suodattimet">
+      <button class="filter-btn active" data-filter="all">Kaikki</button>
+      <button class="filter-btn" data-filter="active">Aktiiviset</button>
+      <button class="filter-btn" data-filter="completed">Valmiit</button>
+    </div>
+
+    <!-- Just to push buttons apart -->
+    <div style="flex: 1;"></div>
+
+    <button id="clearCompleted" class="icon-btn" title="Poista valmiit">
+      Poista valmiit
+    </button>
+  </div>
+
+  <!-- Todo list itself -->
+  <div class="list" id="todoList" aria-live="polite">
+    <!-- Todos get inserted here -->
+  </div>
+
+  <footer>
+    <div class="count" id="info">0 aktiivista</div>
+    <div>
+      <small class="count">Tallennetaan selaimen localStorageen (toivottavasti toimii kaikilla selaimilla!)</small>
+    </div>
+  </footer>
+  <script src="todo-js"></script>
+</main>
